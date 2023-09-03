@@ -1,6 +1,5 @@
-
-
 import 'package:dvt_weather/controller/bloc/app_bar_controller/app_bar_controller_bloc.dart';
+import 'package:dvt_weather/controller/bloc/favourites/favourites_bloc.dart';
 import 'package:dvt_weather/controller/bloc/searched_locations/searched_locations_bloc.dart';
 import 'package:dvt_weather/controller/bloc/weather_data/weather_data_bloc.dart';
 import 'package:dvt_weather/controller/bloc/weather_ui/weather_ui_bloc.dart';
@@ -23,10 +22,12 @@ void main() {
       BlocProvider(create: (context) => ThemeCubit()),
       BlocProvider(create: (context) => BgImageThemeCubit()),
       BlocProvider(create: (context) => WeatherUIBloc()),
-      BlocProvider(create: (context) => WeatherForecastDataBloc(weatherRepository)),
+      BlocProvider(
+          create: (context) => WeatherForecastDataBloc(weatherRepository)),
       BlocProvider(create: (context) => CurrentWeatherBloc(weatherRepository)),
       BlocProvider(create: (context) => AppBarControllerBloc()),
       BlocProvider(create: (context) => SearchedLocationsBloc()),
+      BlocProvider(create: (context) => FavouritesBloc()),
     ], child: const MyApp()),
   );
 }
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
               ),
         onGenerateRoute: (settings) => generateRoute(settings),
         home: RepositoryProvider(
-            create: (context)=> WeatherRepository(),
+            create: (context) => WeatherRepository(),
             child: const SplashScreen()),
       ),
     );
