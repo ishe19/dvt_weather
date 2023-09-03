@@ -1,11 +1,14 @@
+import 'package:dvt_weather/controller/bloc/favourites/favourites_bloc.dart';
 import 'package:dvt_weather/data/functions.dart';
 import 'package:dvt_weather/data/models/current_weather_model.dart';
+import 'package:dvt_weather/data/models/favourite_model.dart';
 import 'package:dvt_weather/data/models/searched_up_locations.dart';
 import 'package:dvt_weather/repository/weather_repository.dart';
 import 'package:dvt_weather/res/colors/colors.dart';
 import 'package:dvt_weather/ui/constants/constants.dart';
 import 'package:dvt_weather/ui/home/widgets/custom_future_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SearchedUpLocationTile extends StatefulWidget {
   final SearchedUpLocation location;
@@ -22,6 +25,7 @@ class _SearchedUpLocationTileState extends State<SearchedUpLocationTile> {
 
   @override
   Widget build(BuildContext context) {
+    final favouriteBloc = BlocProvider.of<FavouritesBloc>(context, listen: false);
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: Card(
@@ -73,6 +77,11 @@ class _SearchedUpLocationTileState extends State<SearchedUpLocationTile> {
                 child: SizedBox(
                   child: GestureDetector(
                     onTap: (){
+                      FavouriteModel favModel = FavouriteModel(
+                          name: widget.location.name,
+                          longitude: widget.location.longitude,
+                          latitude: widget.location.latitude);
+                      favouriteBloc.add(AddFavourite(favModel));
                       setState(() {
                         favourite = !favourite;
                       });
