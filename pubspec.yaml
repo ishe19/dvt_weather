@@ -55,6 +55,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
+  bloc_test: ^9.1.4
+  build_runner:
+  mockito:
+  mocktail:
 
 flutter_icons:
   android: true
