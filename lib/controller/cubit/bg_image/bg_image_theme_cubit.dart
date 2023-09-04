@@ -1,4 +1,4 @@
-import 'package:dvt_weather/ui/constants/constants.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
