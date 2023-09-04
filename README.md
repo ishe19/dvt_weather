@@ -51,9 +51,9 @@ To view detailed weather information, simply tap on a specific location or choos
 
 ![Home Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/home_screen.png))
 
-![Search Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/home_screen.png)
+![Search Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/search_screen.png)
 
-![Favourites Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/search_screen.png)
+![Favourites Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/favourites_screen.png)
 
 ![Favourites Details](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/Favourites_Details_Screen.png)
 
