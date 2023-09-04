@@ -1,11 +1,7 @@
-import 'package:dvt_weather/services/weather_api_service.dart';
-import 'package:dvt_weather/ui/constants/constants.dart';
-import 'package:flutter/material.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../repository/weather_repository.dart';
-import 'models/current_weather_model.dart';
 
 Future<bool> isDarkPrefs() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
