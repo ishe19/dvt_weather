@@ -1,4 +1,4 @@
-import 'package:dvt_weather/data/functions.dart';
+import 'package:dvt_weather/res/functions/functions.dart';
 import 'package:dvt_weather/res/colors/colors.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:flutter/material.dart';
