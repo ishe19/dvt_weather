@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:dvt_weather/data/functions.dart';
+import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
 import '../data/models/current_weather_model.dart';
@@ -47,7 +48,6 @@ class WeatherService {
   }
 
   Future<CurrentWeatherModel> getCurrentForecast() async {
-
     late Position position;
 
     try {
@@ -62,6 +62,7 @@ class WeatherService {
         "lon": "${position.longitude}",
         "appid": _apiKey
       };
+
       String url = "$baseApiUrl/weather";
       final response = await dio.get(url,
           queryParameters: parameters, options: Options(headers: header));
@@ -76,8 +77,8 @@ class WeatherService {
     }
   }
 
-
-  Future<CurrentWeatherModel> getSearchedCurrent(String latitude, String longitude) async {
+  Future<CurrentWeatherModel> getSearchedCurrent(
+      String latitude, String longitude) async {
     try {
       Map<String, String> parameters = {
         "lat": latitude,
