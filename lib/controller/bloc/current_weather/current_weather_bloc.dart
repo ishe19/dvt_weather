@@ -1,10 +1,10 @@
 
 import 'package:dvt_weather/data/models/current_weather_model.dart';
+import 'package:dvt_weather/domain/repository/weather_repository.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../repository/weather_repository.dart';
 
 part 'current_weather_event.dart';
 part 'current_weather_state.dart';
