@@ -1,5 +1,6 @@
 import 'package:dvt_weather/data/models/favourite_model.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'favourites_event.dart';
@@ -11,6 +12,12 @@ class FavouritesBloc extends Bloc<FavouritesEvent, FavouritesState> {
     on<AddFavourite>((event, emit) {
       final List<FavouriteModel> favourites = List.of(state.favourites)
         ..add(event.favourite);
+      emit(FavouritesState(favourites));
+    });
+
+    on<RemoveFavouriteEvent>((event, emit) {
+      List<FavouriteModel> favourites = List.of(state.favourites)
+        ..remove(event.favourite);
       emit(FavouritesState(favourites));
     });
   }
