@@ -1,5 +1,5 @@
 import 'package:dvt_weather/controller/bloc/favourites/favourites_bloc.dart';
-import 'package:dvt_weather/data/functions.dart';
+import 'package:dvt_weather/res/functions/functions.dart';
 import 'package:dvt_weather/data/models/current_weather_model.dart';
 import 'package:dvt_weather/data/models/favourite_model.dart';
 import 'package:dvt_weather/domain/repository/weather_repository.dart';
