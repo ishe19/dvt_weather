@@ -4,7 +4,6 @@ import 'package:dvt_weather/data/models/current_weather_model.dart';
 import 'package:dvt_weather/data/models/favourite_model.dart';
 import 'package:dvt_weather/data/models/searched_up_locations.dart';
 import 'package:dvt_weather/repository/weather_repository.dart';
-import 'package:dvt_weather/res/colors/colors.dart';
 import 'package:dvt_weather/ui/constants/constants.dart';
 import 'package:dvt_weather/ui/home/widgets/custom_future_builder.dart';
 import 'package:flutter/material.dart';
@@ -25,11 +24,19 @@ class _SearchedUpLocationTileState extends State<SearchedUpLocationTile> {
 
   @override
   Widget build(BuildContext context) {
-    final favouriteBloc = BlocProvider.of<FavouritesBloc>(context, listen: false);
+    final favouriteBloc =
+        BlocProvider.of<FavouritesBloc>(context, listen: true);
+    for (FavouriteModel fav in favouriteBloc.state.favourites) {
+      if (fav.name == widget.location.name) {
+        setState(() {
+          favourite = true;
+        });
+      }
+    }
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: Card(
-        color: secondary,
+        // color: accent.withOpacity(0.8),
         child: SizedBox(
           height: screenHeight(context) * 0.1,
           child: Row(
@@ -43,17 +50,21 @@ class _SearchedUpLocationTileState extends State<SearchedUpLocationTile> {
                       children: [
                         Row(
                           children: [
-                            Text(
-                              "Location: ${widget.location.name}",
-                              style: const TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w500),
+                            SizedBox(
+                              width: screenWidth(context) * 0.7,
+                              child: Text(
+                                "Location: ${widget.location.name}",
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.w500),
+                              ),
                             ),
                           ],
                         ),
                         CustomFutureBuilder(
-                          onLoading: (){
-                            return const LinearProgressIndicator();
-                          },
+                            onLoading: () {
+                              return const LinearProgressIndicator();
+                            },
                             future: weatherRepository.getSearchedCurrent(
                                 widget.location.latitude,
                                 widget.location.longitude),
@@ -61,9 +72,10 @@ class _SearchedUpLocationTileState extends State<SearchedUpLocationTile> {
                               return Row(
                                 children: [
                                   Text(
-                                    "Current: ${kelvinToCelsius(weather.main!.temp!).toStringAsFixed(0)}",
+                                    "Current: ${kelvinToCelsius(weather.main!.temp!).toStringAsFixed(0)}$degreeString",
                                     style: const TextStyle(
-                                        fontSize: 18, fontWeight: FontWeight.w500),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500),
                                     textAlign: TextAlign.left,
                                   ),
                                 ],
@@ -72,22 +84,37 @@ class _SearchedUpLocationTileState extends State<SearchedUpLocationTile> {
                       ],
                     ),
                   )),
-               Expanded(
+              Expanded(
                 flex: 1,
                 child: SizedBox(
                   child: GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       FavouriteModel favModel = FavouriteModel(
                           name: widget.location.name,
                           longitude: widget.location.longitude,
                           latitude: widget.location.latitude);
-                      favouriteBloc.add(AddFavourite(favModel));
+
+                      favourite =
+                          favouriteBloc.state.favourites.contains(favModel);
+
+                      favouriteBloc.state.favourites.contains(favModel)
+                          ? favouriteBloc.add(RemoveFavouriteEvent(favModel))
+                          : favouriteBloc.add(AddFavourite(favModel));
                       setState(() {
                         favourite = !favourite;
                       });
                     },
                     child: Center(
-                      child: favourite? const Icon(Icons.favorite_outlined, size: 45, color: complimentary,) : const Icon(Icons.favorite_border, size: 45,),
+                      child: favourite
+                          ? const Icon(
+                              Icons.favorite_outlined,
+                              size: 45,
+                              color: Colors.red,
+                            )
+                          : const Icon(
+                              Icons.favorite_border,
+                              size: 45,
+                            ),
                     ),
                   ),
                 ),
