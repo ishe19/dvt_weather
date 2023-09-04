@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 
 import '../../../repository/weather_repository.dart';
+import '../widgets/weather_app_bar.dart';
 import 'tabs/export_tabs.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -103,9 +104,9 @@ class _HomeScreenState extends State<HomeScreen> {
       create: (context) => WeatherRepository(),
       child: Scaffold(
         extendBodyBehindAppBar: true,
-        // appBar: const PreferredSize(
-        //     preferredSize: Size.fromHeight(60),
-        //     child: WeatherAppBar()),
+        appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(60),
+            child: WeatherAppBar()),
         drawer: const AppDrawer(),
         bottomNavigationBar: NavigationBar(
           // indicatorColor: secondary,
