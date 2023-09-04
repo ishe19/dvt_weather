@@ -1,5 +1,5 @@
 import 'package:dvt_weather/data/models/weather_model.dart';
-import 'package:dvt_weather/repository/weather_repository.dart';
+import 'package:dvt_weather/domain/repository/weather_repository.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
