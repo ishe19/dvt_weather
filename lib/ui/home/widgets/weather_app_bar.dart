@@ -30,8 +30,3 @@ class _WeatherAppBarState extends State<WeatherAppBar> {
     });
   }
 }
-
-PreferredSizeWidget appBar(Widget widget, double height){
-  return PreferredSize(
-      preferredSize: Size.fromHeight(height), child: widget,);
-}
