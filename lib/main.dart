@@ -6,9 +6,9 @@ import 'package:dvt_weather/controller/bloc/weather_ui/weather_ui_bloc.dart';
 import 'package:dvt_weather/controller/cubit/bg_image/bg_image_theme_cubit.dart';
 
 import 'package:dvt_weather/controller/cubit/theme/theme_cubit.dart';
-import 'package:dvt_weather/repository/weather_repository.dart';
+import 'package:dvt_weather/domain/repository/weather_repository.dart';
 import 'package:dvt_weather/router.dart';
-import 'package:dvt_weather/ui/splash_screen/splash_screen.dart';
+import 'package:dvt_weather/presentation/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
