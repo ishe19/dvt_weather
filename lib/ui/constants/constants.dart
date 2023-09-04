@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 
+String degreeString = "\u00b0";
+
 
 enum ImageThemes {
   sea,
