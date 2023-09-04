@@ -93,8 +93,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                     height: screenWidth(context) * 0.1,
                                     child: DropdownButtonFormField(
                                       decoration: InputDecoration(
-                                        fillColor: complimentary.withOpacity(0.2),
-                                          filled: true),
+                                        fillColor: complimentary.withOpacity(0.1),
+                                          filled: false),
                                       value: bgImageTheme.imageTheme != ""? bgImageTheme.imageTheme : imageTheme,
                                       icon: const Icon(Icons.keyboard_arrow_down),
                                       items: imageThemes.map((item) {
@@ -115,8 +115,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ),
                         ),
-                      )
-
+                      ),
                     ],
                   ),
                 ),
