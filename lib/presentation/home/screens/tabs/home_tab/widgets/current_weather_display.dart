@@ -1,5 +1,4 @@
 import 'package:dvt_weather/controller/bloc/current_weather/current_weather_bloc.dart';
-import 'package:dvt_weather/repository/weather_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

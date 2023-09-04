@@ -1,9 +1,9 @@
 import 'package:dvt_weather/controller/bloc/app_bar_controller/app_bar_controller_bloc.dart';
-import 'package:dvt_weather/ui/home/screens/tabs/search/widgets/seearch_app_bar.dart';
+import 'package:dvt_weather/presentation/home/screens/tabs/search/widgets/search_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'favourites_app_bar.dart';
+import '../screens/tabs/favourites/widgets/favourites_app_bar.dart';
 import '../screens/tabs/home_tab/widgets/home_app_bar.dart';
 
 

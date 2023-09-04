@@ -1,11 +1,11 @@
 import 'package:dvt_weather/controller/bloc/app_bar_controller/app_bar_controller_bloc.dart';
-import 'package:dvt_weather/ui/constants/constants.dart';
-import 'package:dvt_weather/ui/home/widgets/drawer.dart';
+import 'package:dvt_weather/domain/repository/weather_repository.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
+import 'package:dvt_weather/presentation/home/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 
-import '../../../repository/weather_repository.dart';
 import '../widgets/weather_app_bar.dart';
 import 'tabs/export_tabs.dart';
 

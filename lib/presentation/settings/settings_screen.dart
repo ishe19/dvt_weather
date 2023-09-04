@@ -1,7 +1,7 @@
 import 'package:dvt_weather/controller/cubit/bg_image/bg_image_theme_cubit.dart';
 import 'package:dvt_weather/controller/cubit/theme/theme_cubit.dart';
 import 'package:dvt_weather/res/colors/colors.dart';
-import 'package:dvt_weather/ui/constants/constants.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';

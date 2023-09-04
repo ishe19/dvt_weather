@@ -1,5 +1,5 @@
 import 'package:dvt_weather/controller/bloc/favourites/favourites_bloc.dart';
-import 'package:dvt_weather/ui/home/screens/tabs/favourites/widgets/favourite_item.dart';
+import 'package:dvt_weather/presentation/home/screens/tabs/favourites/widgets/favourite_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';

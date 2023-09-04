@@ -1,7 +1,6 @@
 import 'package:dvt_weather/controller/bloc/current_weather/current_weather_bloc.dart';
 import 'package:dvt_weather/data/functions.dart';
-import 'package:dvt_weather/repository/weather_repository.dart';
-import 'package:dvt_weather/ui/constants/constants.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

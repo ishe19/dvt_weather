@@ -1,5 +1,5 @@
-import 'package:dvt_weather/ui/constants/constants.dart';
-import 'package:dvt_weather/ui/settings/settings_screen.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
+import 'package:dvt_weather/presentation/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
