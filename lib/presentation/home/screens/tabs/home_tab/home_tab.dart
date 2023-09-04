@@ -10,7 +10,7 @@ import 'package:dvt_weather/presentation/home/screens/tabs/home_tab/widgets/fore
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../data/functions.dart';
+import '../../../../../res/functions/functions.dart';
 import '../../../../constants/constants.dart';
 
 class HomeTab extends StatefulWidget {
