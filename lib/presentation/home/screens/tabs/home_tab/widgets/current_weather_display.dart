@@ -2,7 +2,7 @@ import 'package:dvt_weather/controller/bloc/current_weather/current_weather_bloc
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../data/functions.dart';
+import '../../../../../../res/functions/functions.dart';
 import '../../../../../constants/constants.dart';
 
 class CurrentWeatherDisplay extends StatelessWidget {
