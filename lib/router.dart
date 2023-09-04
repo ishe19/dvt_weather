@@ -1,5 +1,5 @@
-import 'package:dvt_weather/ui/home/screens/home_screen.dart';
-import 'package:dvt_weather/ui/settings/settings_screen.dart';
+import 'package:dvt_weather/presentation/home/screens/home_screen.dart';
+import 'package:dvt_weather/presentation/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
