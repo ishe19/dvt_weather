@@ -1,6 +1,6 @@
 import 'package:dvt_weather/data/models/current_weather_model.dart';
 import 'package:dvt_weather/data/models/weather_model.dart';
-import 'package:dvt_weather/services/weather_api_service.dart';
+import 'package:dvt_weather/domain/services/weather_api_service.dart';
 
 class WeatherRepository {
   final WeatherService _weatherService = WeatherService();
