@@ -14,6 +14,6 @@ class WeatherRepository {
   }
 
   Future<CurrentWeatherModel> getSearchedCurrent(String latitude, String longitude) async {
-    return _weatherService.getCurrentForecast();
+    return _weatherService.getSearchedCurrent(latitude, longitude);
   }
 }
