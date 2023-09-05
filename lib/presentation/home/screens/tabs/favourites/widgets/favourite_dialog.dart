@@ -2,8 +2,7 @@ import 'package:dvt_weather/res/functions/functions.dart';
 import 'package:dvt_weather/res/colors/colors.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../../data/models/current_weather_model.dart';
+import 'package:dvt_weather/data/models/export_models.dart';
 
 class FavouriteDetailsDialog extends StatelessWidget {
   final CurrentWeatherModel currentWeatherModel;
