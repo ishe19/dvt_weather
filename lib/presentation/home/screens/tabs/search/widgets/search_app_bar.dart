@@ -14,6 +14,7 @@ class _SearchAppBarState extends State<SearchAppBar> {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text("Search"),
+      centerTitle: true,
     );
   }
 }
