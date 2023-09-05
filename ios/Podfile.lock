@@ -7,8 +7,6 @@ PODS:
     - Toast
   - geolocator_apple (1.2.0):
     - Flutter
-  - package_info_plus (0.4.5):
-    - Flutter
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -21,7 +19,6 @@ DEPENDENCIES:
   - flutter_compass (from `.symlinks/plugins/flutter_compass/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
-  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
 
@@ -38,8 +35,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/fluttertoast/ios"
   geolocator_apple:
     :path: ".symlinks/plugins/geolocator_apple/ios"
-  package_info_plus:
-    :path: ".symlinks/plugins/package_info_plus/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   url_launcher_ios:
@@ -50,7 +45,6 @@ SPEC CHECKSUMS:
   flutter_compass: cbbd285cea1584c7ac9c4e0c3e1f17cbea55e855
   fluttertoast: fafc4fa4d01a6a9e4f772ecd190ffa525e9e2d9c
   geolocator_apple: cc556e6844d508c95df1e87e3ea6fa4e58c50401
-  package_info_plus: fd030dabf36271f146f1f3beacd48f564b0f17f7
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
