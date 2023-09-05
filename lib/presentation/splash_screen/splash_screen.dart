@@ -1,6 +1,6 @@
 import 'package:dvt_weather/controller/cubit/bg_image/bg_image_theme_cubit.dart';
 import 'package:dvt_weather/controller/cubit/theme/theme_cubit.dart';
-import 'package:dvt_weather/res/functions/functions.dart';
+import 'package:dvt_weather/res/constants/functions.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:dvt_weather/presentation/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:dvt_weather/res/functions/functions.dart';
+import 'package:dvt_weather/res/constants/api_key.dart';
+import 'package:dvt_weather/res/constants/functions.dart';
 import 'package:dvt_weather/data/models/current_weather_model.dart';
 import 'package:dvt_weather/data/models/weather_model.dart';
 import 'package:geolocator/geolocator.dart';
@@ -8,7 +9,7 @@ import 'package:geolocator/geolocator.dart';
 
 class WeatherService {
   final Dio dio = Dio();
-  final _apiKey = "e9386b4dcfd4708d672b76dfd60f9f82";
+
   final String baseApiUrl = "https://api.openweathermap.org/data/2.5";
 
   var header = {
@@ -27,7 +28,7 @@ class WeatherService {
     Map<String, String> parameters = {
       "lat": "${position.latitude}",
       "lon": "${position.longitude}",
-      "appid": _apiKey
+      "appid": apiKey
     };
 
     String url = "$baseApiUrl/forecast";
@@ -60,7 +61,7 @@ class WeatherService {
       Map<String, String> parameters = {
         "lat": "${position.latitude}",
         "lon": "${position.longitude}",
-        "appid": _apiKey
+        "appid": apiKey
       };
 
       String url = "$baseApiUrl/weather";
@@ -83,7 +84,7 @@ class WeatherService {
       Map<String, String> parameters = {
         "lat": latitude,
         "lon": longitude,
-        "appid": _apiKey
+        "appid": apiKey
       };
       String url = "$baseApiUrl/weather";
       final response = await dio.get(url,

@@ -1,6 +1,6 @@
-import 'package:dvt_weather/res/functions/functions.dart';
 import 'package:dvt_weather/res/colors/colors.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
+import 'package:dvt_weather/res/constants/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:dvt_weather/data/models/export_models.dart';
 
