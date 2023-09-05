@@ -5,7 +5,6 @@ import 'package:dvt_weather/presentation/home/widgets/drawer.dart';
 import 'package:dvt_weather/res/functions/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geolocator/geolocator.dart';
 
 import '../widgets/weather_app_bar.dart';
 import 'tabs/export_tabs.dart';
@@ -24,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    determinePosition();
     super.initState();
   }
 
