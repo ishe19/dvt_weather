@@ -135,7 +135,7 @@ class _HomeTabState extends State<HomeTab>
                               SizedBox(
                                   width: screenWidth(context),
                                   child: Text(
-                                    "${kelvinToCelsius(state.currentWeather.main!.temp ?? 273.15).toStringAsFixed(0)}\u00b0",
+                                    "${kelvinToCelsius(state.currentWeather.main!.temp ?? 273.15).toStringAsFixed(0)}$degreeString",
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(fontSize: 72),
                                   )),
@@ -152,8 +152,8 @@ class _HomeTabState extends State<HomeTab>
                           children: [
                             SizedBox(
                                 width: screenWidth(context),
-                                child: const Text(
-                                  "N/A\u00b0",
+                                child: Text(
+                                  "N/A$degreeString",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(fontSize: 72),
                                 )),
