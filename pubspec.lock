@@ -41,14 +41,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
-  back_button_interceptor:
-    dependency: transitive
-    description:
-      name: back_button_interceptor
-      sha256: e47660f2178a4392eb72001f9594d3fdcb5efde93e59d2819d61fda499e781c8
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.0.2"
   bloc:
     dependency: transitive
     description:
@@ -512,14 +504,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
-  loader_overlay:
-    dependency: "direct main"
-    description:
-      name: loader_overlay
-      sha256: "74fab08c4f2f686e2cc32887cbc76a90d685afd2ffb79526221fc9e7cf027320"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.3.2"
   location_picker_flutter_map:
     dependency: "direct main"
     description:
@@ -616,22 +600,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
-  package_info_plus:
-    dependency: "direct main"
-    description:
-      name: package_info_plus
-      sha256: "6ff267fcd9d48cb61c8df74a82680e8b82e940231bb5f68356672fde0397334a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.1.0"
-  package_info_plus_platform_interface:
-    dependency: transitive
-    description:
-      name: package_info_plus_platform_interface
-      sha256: "9bc8ba46813a4cc42c66ab781470711781940780fd8beddd0c3da62506d3a6c6"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.1"
   path:
     dependency: transitive
     description:
