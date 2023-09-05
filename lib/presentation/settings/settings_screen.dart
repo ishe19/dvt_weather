@@ -61,7 +61,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         child: ListTile(
                           contentPadding: const EdgeInsets.all(8),
                           leading: const Icon(Icons.dark_mode),
-                          title: const Text(
+                            title: const Text(
                             "Dark mode",
                           ),
                           trailing: Switch(
