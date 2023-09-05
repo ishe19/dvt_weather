@@ -2,7 +2,6 @@ import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 Future<bool> isDarkPrefs() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   if (prefs.getBool("isDark") != null) {
