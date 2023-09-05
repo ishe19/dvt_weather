@@ -1,13 +1,11 @@
 import 'package:dvt_weather/controller/bloc/favourites/favourites_bloc.dart';
 import 'package:dvt_weather/res/functions/functions.dart';
-import 'package:dvt_weather/data/models/current_weather_model.dart';
-import 'package:dvt_weather/data/models/favourite_model.dart';
-import 'package:dvt_weather/data/models/searched_up_locations.dart';
 import 'package:dvt_weather/domain/repository/weather_repository.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:dvt_weather/presentation/home/widgets/custom_future_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:dvt_weather/data/models/export_models.dart';
 
 class SearchedUpLocationTile extends StatefulWidget {
   final SearchedUpLocation location;

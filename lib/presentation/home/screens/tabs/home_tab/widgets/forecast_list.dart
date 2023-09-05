@@ -1,11 +1,12 @@
 
-import 'package:dvt_weather/data/models/list_element_model.dart';
+
+import 'package:dvt_weather/controller/bloc/weather_data/weather_data_bloc.dart';
 import 'package:dvt_weather/presentation/home/screens/tabs/home_tab/widgets/weather_forecast_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:dvt_weather/data/models/export_models.dart';
 
-import '../../../../../../controller/bloc/weather_data/weather_data_bloc.dart';
 
 class ForecastList extends StatefulWidget {
   const ForecastList({super.key});

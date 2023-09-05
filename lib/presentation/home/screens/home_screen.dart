@@ -2,11 +2,10 @@ import 'package:dvt_weather/controller/bloc/app_bar_controller/app_bar_controlle
 import 'package:dvt_weather/domain/repository/weather_repository.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:dvt_weather/presentation/home/widgets/drawer.dart';
+import 'package:dvt_weather/presentation/home/widgets/weather_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geolocator/geolocator.dart';
 
-import '../widgets/weather_app_bar.dart';
 import 'tabs/export_tabs.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,37 +19,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-  Future<Position> _determinePosition() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      return Future.error('Location services are disabled.');
-    }
-
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        return Future.error('Location permissions are denied');
-      }
-    }
-
-    if (permission == LocationPermission.deniedForever) {
-      return Future.error(
-          'Location permissions are permanently denied, we cannot request permissions.');
-    }
-
-    return await Geolocator.getCurrentPosition();
-  }
-
-  @override
-  void initState() {
-    _determinePosition();
-    super.initState();
-  }
-
   int selectedIndex = 0;
 
   final List<Widget> _tabOptions = const [
@@ -58,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
     SearchTab(),
     FavouritesTab()
   ];
+
   final List<NavigationDestination> _destinations = [
     NavigationDestination(
         selectedIcon: Icon(
@@ -92,6 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   void dispose() {
     super.dispose();
   }
@@ -108,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
             child: WeatherAppBar()),
         drawer: const AppDrawer(),
         bottomNavigationBar: NavigationBar(
-          // indicatorColor: secondary,
           height: screenWidth(context) * 0.15,
           selectedIndex: selectedIndex,
           onDestinationSelected: (index) {

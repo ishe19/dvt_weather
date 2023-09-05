@@ -1,10 +1,10 @@
 import 'package:dvt_weather/controller/bloc/searched_locations/searched_locations_bloc.dart';
-import 'package:dvt_weather/data/models/searched_up_locations.dart';
+import 'package:dvt_weather/data/models/export_models.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:dvt_weather/presentation/home/screens/tabs/search/widgets/searched_up_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:location_picker_flutter_map/location_picker_flutter_map.dart';
-import '../../../../constants/constants.dart';
 
 class SearchTab extends StatefulWidget {
   const SearchTab({super.key});

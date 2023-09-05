@@ -9,6 +9,8 @@
 - View detailed weather information such as temperature, humidity, wind speed, and more
 - Search for weather conditions in different locations
 - Save favorite locations for quick access
+- Theme changes based on weather (dark for cloudy or rainy & light for sunny or clear)
+- Switching between weather themes (forest or sea) in settings
 
 ## Dependencies
 The following dependencies are used in this project:
@@ -25,8 +27,13 @@ The following dependencies are used in this project:
 ### Shared_preferences :
   For storing and persisting simple data to the device
 
-### Equatable
+### Equatable:
   A Dart package that helps to implement value based equality without needing to explicitly override == and hashCode.
+
+### location_picker_flutter_map:
+A Flutter package that provides Place search and Location picker for flutter maps with a lot of customizations using Open Street Map.
+
+
 
 
 ## Installation
@@ -35,13 +42,13 @@ To run the Weather App on your local machine, follow these steps:
 1. Make sure you have Flutter installed. If not, refer to the official Flutter installation guide: [Flutter Installation](https://docs.flutter.dev/get-started/install)
 
 2. Clone the repository:
-  - git clone https://github.com/ishe19/dvt_weather/weather-app.git
+   - git clone https://github.com/ishe19/dvt_weather/weather-app.git
 3. Navigate to the project directory:
-  - cd dvt_weather
+   - cd dvt_weather
 4. Install dependencies:
-  - flutter pug get
+   - flutter pug get
 5.Run the app:
-  - flutter run
+   - flutter run
 
 ## Usage
 Upon launching the Weather App, you will be presented with the home screen displaying the current weather conditions based on your device's location. You can also search for weather conditions in different locations by entering the city name in the search bar.

@@ -4,14 +4,15 @@ import 'package:dvt_weather/controller/bloc/weather_ui/weather_ui_bloc.dart';
 import 'package:dvt_weather/controller/cubit/bg_image/bg_image_theme_cubit.dart';
 import 'package:dvt_weather/controller/cubit/theme/theme_cubit.dart';
 import 'package:dvt_weather/domain/repository/weather_repository.dart';
+import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:dvt_weather/res/colors/colors.dart';
 import 'package:dvt_weather/presentation/home/screens/tabs/home_tab/widgets/current_weather_tile.dart';
 import 'package:dvt_weather/presentation/home/screens/tabs/home_tab/widgets/forecast_list.dart';
+import 'package:dvt_weather/res/functions/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../res/functions/functions.dart';
-import '../../../../constants/constants.dart';
+
 
 class HomeTab extends StatefulWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -134,7 +135,7 @@ class _HomeTabState extends State<HomeTab>
                               SizedBox(
                                   width: screenWidth(context),
                                   child: Text(
-                                    "${kelvinToCelsius(state.currentWeather.main!.temp ?? 273.15).toStringAsFixed(0)}\u00b0",
+                                    "${kelvinToCelsius(state.currentWeather.main!.temp ?? 273.15).toStringAsFixed(0)}$degreeString",
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(fontSize: 72),
                                   )),
@@ -151,8 +152,8 @@ class _HomeTabState extends State<HomeTab>
                           children: [
                             SizedBox(
                                 width: screenWidth(context),
-                                child: const Text(
-                                  "N/A\u00b0",
+                                child: Text(
+                                  "N/A$degreeString",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(fontSize: 72),
                                 )),
@@ -206,7 +207,6 @@ class _HomeTabState extends State<HomeTab>
                                 if (state is CurrentWeatherDataLoaded) {
                                   return const ForecastList();
                                 }
-
                                 return const Center(
                                   child: Icon(Icons.error),
                                 );

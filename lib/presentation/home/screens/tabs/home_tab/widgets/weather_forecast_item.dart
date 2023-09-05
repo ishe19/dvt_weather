@@ -12,9 +12,7 @@ class WeatherForecastListItem extends StatelessWidget {
   String convertDateString(String dateString){
     DateTime dateTime = DateTime.parse(dateString);
     String dayName = DateFormat.EEEE().format(dateTime);
-
     return dayName;
-
   }
 
   @override
@@ -28,7 +26,7 @@ class WeatherForecastListItem extends StatelessWidget {
           children: [
             Expanded(child: Text(convertDateString(listElement.dtTxt), style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 20), )),
             Expanded(child: weatherIcon(listElement.weather[0].main)),
-            Expanded(child: Text("${kelvinToCelsius(listElement.main.temp).toStringAsFixed(0)}\u00b0",
+            Expanded(child: Text("${kelvinToCelsius(listElement.main.temp).toStringAsFixed(0)}$degreeString",
               textAlign: TextAlign.end,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ))

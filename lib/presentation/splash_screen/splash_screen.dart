@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     getThemePrefs().then((value){
       bgImageTheme.changeTheme(value);
     });
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushNamedAndRemoveUntil(
           context, HomeScreen.routeName, (route) => false);
     });
@@ -38,7 +38,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState(){
-    delayedNavigation();
+    determinePosition().then((value) {
+      delayedNavigation();
+    });
     super.initState();
   }
 
