@@ -9,6 +9,8 @@
 - View detailed weather information such as temperature, humidity, wind speed, and more
 - Search for weather conditions in different locations
 - Save favorite locations for quick access
+- Theme changes based on weather (dark for cloudy or rainy & light for sunny or clear)
+- Switching between weather themes (forest or sea) in settings
 
 ## Dependencies
 The following dependencies are used in this project:
@@ -35,13 +37,13 @@ To run the Weather App on your local machine, follow these steps:
 1. Make sure you have Flutter installed. If not, refer to the official Flutter installation guide: [Flutter Installation](https://docs.flutter.dev/get-started/install)
 
 2. Clone the repository:
-  - git clone https://github.com/ishe19/dvt_weather/weather-app.git
+   - git clone https://github.com/ishe19/dvt_weather/weather-app.git
 3. Navigate to the project directory:
-  - cd dvt_weather
+   - cd dvt_weather
 4. Install dependencies:
-  - flutter pug get
+   - flutter pug get
 5.Run the app:
-  - flutter run
+   - flutter run
 
 ## Usage
 Upon launching the Weather App, you will be presented with the home screen displaying the current weather conditions based on your device's location. You can also search for weather conditions in different locations by entering the city name in the search bar.
@@ -51,9 +53,9 @@ To view detailed weather information, simply tap on a specific location or choos
 
 ![Home Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/home_screen.png))
 
-![Search Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/home_screen.png)
+![Search Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/search_screen.png)
 
-![Favourites Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/search_screen.png)
+![Favourites Screen](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/favourites_screen.png)
 
 ![Favourites Details](https://github.com/ishe19/dvt_weather/blob/main/assets/screenshots/Favourites_Details_Screen.png)
 
