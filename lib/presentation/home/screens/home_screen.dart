@@ -18,6 +18,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   int selectedIndex = 0;
 
   final List<Widget> _tabOptions = const [
