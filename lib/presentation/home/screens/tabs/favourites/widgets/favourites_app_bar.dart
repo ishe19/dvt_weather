@@ -11,6 +11,7 @@ class FavouritesAppBar extends StatelessWidget {
       child: AppBar(
         backgroundColor: Colors.transparent,
         title:const Text("Favourites"),
+        centerTitle: true ,
       ),
     );
   }
