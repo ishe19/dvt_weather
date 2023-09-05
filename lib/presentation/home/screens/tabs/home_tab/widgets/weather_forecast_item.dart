@@ -1,5 +1,5 @@
 
-import 'package:dvt_weather/res/functions/functions.dart';
+import 'package:dvt_weather/res/constants/functions.dart';
 import 'package:dvt_weather/data/models/list_element_model.dart';
 import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:flutter/material.dart';
