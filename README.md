@@ -27,8 +27,13 @@ The following dependencies are used in this project:
 ### Shared_preferences :
   For storing and persisting simple data to the device
 
-### Equatable
+### Equatable:
   A Dart package that helps to implement value based equality without needing to explicitly override == and hashCode.
+
+### location_picker_flutter_map:
+A Flutter package that provides Place search and Location picker for flutter maps with a lot of customizations using Open Street Map.
+
+
 
 
 ## Installation
