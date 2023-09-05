@@ -38,21 +38,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: true);
-    return GlobalLoaderOverlay(
-      child: MaterialApp(
-        title: 'DVT Weather',
-        theme: theme.isDark
-            ? ThemeData.dark(
-                useMaterial3: true,
-              )
-            : ThemeData.light(
-                useMaterial3: true,
-              ),
-        onGenerateRoute: (settings) => generateRoute(settings),
-        home: RepositoryProvider(
-            create: (context) => WeatherRepository(),
-            child: const SplashScreen()),
-      ),
+    return MaterialApp(
+      title: 'DVT Weather',
+      theme: theme.isDark
+          ? ThemeData.dark(
+              useMaterial3: true,
+            )
+          : ThemeData.light(
+              useMaterial3: true,
+            ),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: const SplashScreen(),
     );
   }
 }
