@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsScreen extends StatefulWidget {
   static const routeName = "settings";
+
   const SettingsScreen({super.key});
 
   @override
@@ -19,7 +20,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   List<String> imageThemes = [
     "sea",
-   "forest",
+    "forest",
   ];
 
   Future<void> setDarkPrefs(bool isDark) async {
@@ -32,11 +33,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
     prefs.setString("theme", theme);
   }
 
-
   @override
   Widget build(BuildContext context) {
     ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: false);
-    BgImageThemeCubit bgImageTheme = BlocProvider.of<BgImageThemeCubit>(context, listen: false);
+    BgImageThemeCubit bgImageTheme =
+        BlocProvider.of<BgImageThemeCubit>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -78,7 +79,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           width: screenWidth(context),
                           height: screenWidth(context) * 0.15,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 8.0),
                             child: Row(
                               children: [
                                 const Expanded(
@@ -90,13 +92,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 Expanded(
                                   flex: 2,
                                   child: SizedBox(
-                                    height: screenWidth(context) * 0.1,
+                                    height: screenWidth(context) * 0.12,
                                     child: DropdownButtonFormField(
                                       decoration: InputDecoration(
-                                        fillColor: complimentary.withOpacity(0.1),
+                                          fillColor:
+                                              complimentary.withOpacity(0.1),
                                           filled: false),
-                                      value: bgImageTheme.imageTheme != ""? bgImageTheme.imageTheme : imageTheme,
-                                      icon: const Icon(Icons.keyboard_arrow_down),
+                                      value: bgImageTheme.imageTheme != ""
+                                          ? bgImageTheme.imageTheme
+                                          : imageTheme,
+                                      icon:
+                                          const Icon(Icons.keyboard_arrow_down),
                                       items: imageThemes.map((item) {
                                         return DropdownMenuItem(
                                             value: item, child: Text(item));
