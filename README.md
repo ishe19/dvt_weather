@@ -47,7 +47,7 @@ To run the Weather App on your local machine, follow these steps:
    - cd dvt_weather
 4. Install dependencies:
    - flutter pug get
-5.Run the app:
+5. Run the app:
    - flutter run
 
 ## Usage
