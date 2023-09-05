@@ -4,6 +4,7 @@ import 'package:dvt_weather/presentation/constants/constants.dart';
 import 'package:dvt_weather/presentation/home/screens/tabs/search/widgets/searched_up_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:location_picker_flutter_map/location_picker_flutter_map.dart';
 
 class SearchTab extends StatefulWidget {
@@ -44,7 +45,7 @@ class _SearchTabState extends State<SearchTab>
               flex: 1,
               child: BlocBuilder<SearchedLocationsBloc, SearchedLocationsState>(
                 builder: (context, state) {
-                  return ListView.builder(
+                  return state.locations.isNotEmpty? ListView.builder(
                     padding: const EdgeInsets.only(bottom: 15),
                     itemCount: state.locations.length,
                     itemBuilder: (context, index) {
@@ -52,6 +53,20 @@ class _SearchTabState extends State<SearchTab>
                         location: state.locations[index],
                       );
                     },
+                  )
+                  : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: screenWidth(context) * 0.3,
+                        width: screenWidth(context) * 0.3,
+                        child: SvgPicture.asset(
+                          "assets/svg/search.svg",
+                        ),
+                      ),
+                      addVerticalHeight(10),
+                      Text("No Locations...")
+                    ],
                   );
                 },
               ),

@@ -75,7 +75,6 @@ class _SplashScreenState extends State<SplashScreen> {
                     padding: const EdgeInsets.all(10.0),
                     child: SizedBox(
                       height: screenHeight(context) * 0.35,
-                      // color: Colors.amber,
                       child: Center(
                         child: Column(
                           children: [

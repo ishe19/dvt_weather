@@ -23,6 +23,8 @@ class HomeTab extends StatefulWidget {
 
 class _HomeTabState extends State<HomeTab>
     with AutomaticKeepAliveClientMixin<HomeTab> {
+  Duration animationDuration = Duration(milliseconds: 200);
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -71,7 +73,7 @@ class _HomeTabState extends State<HomeTab>
                       child: BlocBuilder<WeatherUIBloc, WeatherUIState>(
                         builder: (context, state) {
                           if (state is WeatherUISunny) {
-                            return Container(
+                            return AnimatedContainer(
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                 image: AssetImage(bgImageTheme.imageTheme ==
@@ -79,10 +81,11 @@ class _HomeTabState extends State<HomeTab>
                                     ? "assets/images/sea_sunny.png"
                                     : "assets/images/forest_sunny.png"),
                                 fit: BoxFit.cover,
-                              )),
+                              )), duration: animationDuration,
                             );
                           } else if (state is WeatherUICloudy) {
-                            return Container(
+                            return AnimatedContainer(
+                              duration: animationDuration,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                 image: AssetImage(bgImageTheme.imageTheme ==
@@ -93,7 +96,8 @@ class _HomeTabState extends State<HomeTab>
                               )),
                             );
                           } else if (state is WeatherUIRainy) {
-                            return Container(
+                            return AnimatedContainer(
+                              duration: animationDuration,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                 image: AssetImage(bgImageTheme.imageTheme ==
@@ -104,7 +108,8 @@ class _HomeTabState extends State<HomeTab>
                               )),
                             );
                           } else {
-                            return Container(
+                            return AnimatedContainer(
+                              duration: animationDuration,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                 image: AssetImage(bgImageTheme.imageTheme ==
