@@ -26,7 +26,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: true);
     return MaterialApp(
