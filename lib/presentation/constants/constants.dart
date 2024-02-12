@@ -56,15 +56,15 @@ Future<void> showAppDialog(BuildContext context, Widget dialog) async {
     builder: (BuildContext context) {
       return dialog;
     },
-  );
+  );void showToast(BuildContext context, String text) {
+    Fluttertoast.showToast(
+        msg: text, toastLength: Toast.LENGTH_LONG, gravity: ToastGravity.BOTTOM);
+  }
+
+  void showConnectionErrorToast(BuildContext context){
+    Fluttertoast.showToast(msg: "An error occurred please check your internet connection", toastLength: Toast.LENGTH_LONG, gravity: ToastGravity.BOTTOM);
+  }
 }
 
-void showToast(BuildContext context, String text) {
-  Fluttertoast.showToast(
-      msg: text, toastLength: Toast.LENGTH_LONG, gravity: ToastGravity.BOTTOM);
-}
 
-void showConnectionErrorToast(BuildContext context){
-  Fluttertoast.showToast(msg: "An error occurred please check your internet connection", toastLength: Toast.LENGTH_LONG, gravity: ToastGravity.BOTTOM);
-}
 
